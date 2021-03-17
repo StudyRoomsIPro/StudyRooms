@@ -9,6 +9,13 @@ body {
     line-height: 1.5;
     text-align: center;
   }
+
+  .nav-bar {
+    display: block;
+    font: 20px;
+    text-align: center;
+
+  }
   
   img {
     display: block;
