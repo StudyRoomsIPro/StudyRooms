@@ -5,6 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
   <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='style.css') }}" />
+  <!-- <link href="static/style.css" rel="stylesheet" type="text/css" /> -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@200&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@1,100&display=swap" rel="stylesheet">
@@ -24,19 +25,10 @@
     <div class="nav-bar">
       <div class="container">
         <div class="nav-wrapper">
-          <a href="index.html" class="brand-logo">
+          <href="index.html" class="brand-logo"/>
             <h5>Lorem10</h5>
-           {% block content %} {% endblock %}
-	  </a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="story.html">Our Story</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li></li>
-            <li></li>
-              <a href="https://widget.reserve.com/52730d4c-71ed-4aeb-b986-89abb0816df3/search%22%3EReservation</a>
+            {% block content %} {% endblock %}
+            <a href="https://widget.reserve.com/52730d4c-71ed-4aeb-b986-89abb0816df3/search%22%3EReservation</a>
             </li>
             <li><a href="https://swipeit.com/product/1531/la-storia%22%3EGift Cards</a></li>
           </ul>
@@ -112,8 +104,30 @@
         </div>
       </section>
       <!-- Footer -->
-      <footer id="main-footer" class="grid">
-        <div>Study Groups</div>
+      <footer class="page-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Footer Content</h5>
+              <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Links</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          © 2021 Copyright Text
+          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+          </div>
+        </div>
       </footer>
     </main>
     </div>
