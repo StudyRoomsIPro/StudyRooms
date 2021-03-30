@@ -1,7 +1,10 @@
 import json
+from urllib.request import Request, urlopen
 
-with open('s2021.json') as f:
-    data = json.load(f)
+url="https://pop.weclarify.com/data/ssb.iit.edu_Fall2021.json"
+req = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+webpage = urlopen(req).read().decode('utf-8')
+data = json.loads(webpage)
 
 finalDict = {} #contains all rooms and their occupied times
 allRooms = []
@@ -35,5 +38,5 @@ for key in finalDict.keys():
     finalDict[key]['room_number'] = roomNumber
 
                     
-with open('roomInfo.json', 'w') as json_file:
+with open('f2021Info.json', 'w') as json_file:
     json.dump(finalDict, json_file, indent=2)
