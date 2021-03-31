@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <title>Team C IPRO 497</title>
+    <meta charset='utf-8'/>
+    <meta name="viewport" content = "width=device-width,initial-scale=1.0,shrink-to-fit=no"/>
+    <link rel="stylesheet" media = "screen" href = "css/meyersreset-and-normalize-form.css"/>
+    <link rel="stylesheet" media = "screen" href = "css/screen.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@1,100&display=swap" rel="stylesheet">  
+	<!-- Connecting to JavaScript file -->
+    <script async src="jsScript.js"></script>
+	<!-- JQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- Creating header for my form -->
+    <h1>Account Creation</h1>
+    <!-- Creating HTML input form for folks who want to sign up to our application -->
+    <form method = "post" autocomplete = "on" action = "#null">
+	<!-- Creating introduction paragraph -->
+	<p>Hello!  This form is to sign up for our application, Team C IPRO 497!  Please fill out the following info to register</p>
+      <ul> <!-- HTML input for first name, last name, username, cell number -->
+		   <!-- preferred way of communication, region, preferred genres of games -->
+	    <li>
+	      <label for="first_name">First Name:</label>
+          <input type="text" id="first_name" name="first_name" placeholder="First Name"/>
+        </li>
+	    <li>
+	      <label for="last_name">Last Name:</label>
+          <input type="text" id="last_name" name="last_name" placeholder="Last Name"/>
+        </li>
+	    <li>
+	      <label for="studentID">Student ID:</label>
+          <input type="text" id="studentID" name="studentID" placeholder="Username#0000"/>
+        </li>
+	    <li>
+	      <label for="email_address">Email Address:</label>
+          <input type="text" id="email_address" name="email_address" placeholder="Email Address"/>
+        </li>	
+	    <!-- Creating the submit button and the display user button-->
+	    <li class = "button">
+	     <button type="button" id="submit">Submit</button>
+		 <button type="button" id="display_user">Display User</button>
+        </li>
+	  </ul>
+    </form>
+  </body>
+</html>
