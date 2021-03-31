@@ -206,6 +206,12 @@ form {
   margin-bottom: 2px;
   font-family: 'Commissioner', sans-serif;
 }
+/* list tags within my HTML form */
+ul {
+  list-style: none;
+  padding: 3px;
+  margin: 0 auto;
+}
 form li + li {
   padding: 1em;
   text-align:  center;
