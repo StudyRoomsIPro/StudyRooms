@@ -1,0 +1,33 @@
+<head>
+      <title>The jQuery Example</title>
+      <script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>   
+      <script type = "text/javascript" language = "javascript">
+	 var buildings = ["IIT Tower", "Wishnick Hall", "Tech Park - South Building", "Stuart Building", "Robert A. Pritzker Science Ctr", "Downtown Campus", "Hermann Hall"]
+         $(document).ready(function() {
+            $("p").html("<i>Hello World</i>");
+	    var i;
+	    for(i=0; i< buildings.length;i++){
+		var building=$("<p></p>").text(buildings[i]);
+		building.attr("id", buildings[i].toString());
+		building.click(function (){
+			alert(this.id+"was clicked");
+			$("p:not(#"+this.id+")").hide();
+			//need to add code to display rooms
+		});
+		$("body").append(building);
+	    }
+         });
+      </script>		
+      <style>
+         .red { color:red; }
+         .green { color:green; }
+      </style>		
+   </head>	
+
+   <body>
+      <p class="red" id = "pid1">This is first paragraph.</p>
+      <p class="selected" id = "pid2">This is second paragraph.</p>
+      <div id = "result1"></div>      
+   </body>	
+</html>
