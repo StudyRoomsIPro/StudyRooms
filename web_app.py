@@ -46,8 +46,14 @@ def login():
 @app.route('/scheduling')
 def profile():
     if not g.user:
-        return redirect(url_for('login'))
+            return redirect(url_for('login'))
     return render_template('scheduling.html')
+
+@app.route('/scheduling_index')
+def scheduling_index():
+    if not g.user:
+        return redirect(url_for('login'))
+    return render_template('scheduling_index.html')
 
 @app.route("/")
 def home():
