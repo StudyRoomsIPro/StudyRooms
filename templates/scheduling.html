@@ -12,7 +12,7 @@
 		building.attr("id", buildings[i].toString());
 		building.click(function (){
 			alert(this.id+"was clicked");
-			$("p:not(#"+this.id+")").hide();
+			$("p:not("+this.id+")").hide();
 			//need to add code to display rooms
 		});
 		$("body").append(building);
