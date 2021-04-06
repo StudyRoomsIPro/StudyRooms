@@ -21,6 +21,7 @@ users.append(User(id=1, username='max@hawk.iit.edu', password='123'))
 users.append(User(id=2, username='bob@hawk.iit.edu', password='321'))
 app = Flask(__name__)
 app.secret_key = 'asd'
+
 @app.before_request
 def before_request():
     if 'user_id' in session:
@@ -28,6 +29,7 @@ def before_request():
         g.user = user
     else:
         g.user = None
+
 @app.route('/login', methods=['GET', 'POST'] )
 def login():
     if request.method == 'POST':
@@ -40,20 +42,18 @@ def login():
             return redirect(url_for('profile'))
         return redirect(url_for('login'))
     return render_template('login.html')
-@app.route('/profile')
+
+@app.route('/scheduling')
 def profile():
     if not g.user:
         return redirect(url_for('login'))
     return render_template('scheduling.html')
+
 @app.route("/")
 def home():
     return render_template('index.html')
+
 if __name__ == "__main__":
     app.static_folder='static'
     app.run(debug=True)
-@app.route("/")
-def creation():
-    return render_template('creation.html')
-if __name__ == "__main__":
-    app.static_folder='static'
-    app.run(debug=True)
+
