@@ -7,13 +7,13 @@
          "Robert A. Pritzker Science Ctr", "Downtown Campus", "Hermann Hall"
       ]
       $(document).ready(function () {
-         $("p").html("<i>Hello World</i>");
+         $("p").html("<i>Hello!  Please select a building of your choice</i>");
          var i;
          for (i = 0; i < buildings.length; i++) {
             var building = $("<p></p>").text(buildings[i]);
             building.attr("id", buildings[i].toString());
             building.click(function () {
-               alert(this.id + "was clicked");
+               alert(this.id + " was clicked.  We will take you there now");
                $("p:not(" + this.id + ")").hide();
                //need to add code to display rooms
                location.href = "scheduling_index"
