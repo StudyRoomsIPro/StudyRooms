@@ -39,12 +39,12 @@ def login():
         user = [x for x in users if x.username == username][0]
         if user and user.password == password:
             session['user_id'] = user.id
-            return redirect(url_for('profile'))
+            return redirect(url_for('scheduling'))
         return redirect(url_for('login'))
     return render_template('login.html')
 
 @app.route('/scheduling')
-def profile():
+def scheduling():
     if not g.user:
             return redirect(url_for('login'))
     return render_template('scheduling.html')
@@ -58,6 +58,18 @@ def scheduling_index():
 @app.route("/")
 def home():
     return render_template('index.html')
+
+@app.route('/creation')
+def creation():
+    if not g.user:
+        return redirect(url_for('creation'))
+    return render_template('creation.html')
+
+@app.route('/contact')
+def contact():
+    if not g.user:
+        return redirect(url_for('contact'))
+    return render_template('contact.html')
 
 if __name__ == "__main__":
     app.static_folder='static'
