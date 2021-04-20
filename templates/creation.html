@@ -11,13 +11,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@1,100&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </head>
 
 <body>
   <main>
     <nav>
       <div class="nav-wrapper grey">
-        <a href="#" class="brand-logo center">Logo</a>
+        <a href="/" class="brand-logo center">Logo</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="/">Home</a></li>
           <li><a href="login">Login</a></li>
@@ -25,7 +26,7 @@
         </ul>
       </div>
     </nav>
-    <section id="mainform" class="row">
+    <section id="mainform" >
       <div class="row center ">
         <form method="POST">
           <div class="input-field ">
@@ -37,7 +38,7 @@
             <label for="lname">Last Name</label>
           </div>
           <div class="input-field ">
-            <input id="sid" type="number" name="sid" class="white-text text-darken-2">
+            <input id="sid" type="text" name="sid" class="white-text text-darken-2 " data-length="8">
             <label for="sid">Hawk ID</label>
           </div>
           <div class="input-field ">

@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" class="nojs">
+
 <head>
   <title>IPRO 497 Team C Project</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
-  <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='style.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@200&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@1,100&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
+
 <body>
   <main>
     <nav>
       <div class="nav-wrapper grey ">
-        <a href="index.html" class="brand-logo center">Welcome to Team C IPRO 497!</a>
+        <a href="/" class="brand-logo center">Welcome to Team C IPRO 497!</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
     </nav>
-    <section id="mainform" class ="row">
+    <section id="mainform" >
       <div class="row center ">
         <form method="POST">
-        <div class="input-field ">
-          <input id="username" type="email"  name="username">
-          <label for="email_inline">Email</label>
-        </div>
-        <div class="row center">
-          <div class="input-field">
-            <input id="password" type="password"  name="password">
-            <label for="password">Password</label>
-            <a href="https://www.youtube.com/watch?v=Lrj2Hq7xqQ8&ab_channel=LuisRedsVidal" class="white-text text-darken-2">Reset password</a>
+          <div class="input-field ">
+            <input id="username" type="email" name="username" class="white-text text-darken-2">
+            <label for="email_inline">Email</label>
           </div>
-          <button type="submit" class="button is-success">
-            Login
-          </button>
-        </div>
+          <div class="row center">
+            <div class="input-field">
+              <input id="password" type="password" name="password" class="white-text text-darken-2">
+              <label for="password">Password</label>
+              <a href="https://www.youtube.com/watch?v=Lrj2Hq7xqQ8&ab_channel=LuisRedsVidal"
+                class="white-text text-darken-2">Reset password</a>
+            </div>
+            <button class="btn waves-effect waves-light" type="submit" name="action">
+              Login </button>
+          </div>
       </div>
-    </form>
+      </form>
     </section>
     <footer class="page-footer grey">
       <div class="container">
@@ -62,4 +64,5 @@
   <script src="js/jsScript.js"></script>
   </main>
 </body>
+
 </html>
