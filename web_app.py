@@ -71,6 +71,11 @@ def contact():
         return redirect(url_for('contact'))
     return render_template('contact.html')
 
+@app.route('/status')
+def status():
+    if not g.user:
+            return redirect(url_for('login'))
+    return render_template('status.html')
 
 if __name__ == "__main__":
     app.static_folder='static'
