@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" class="nojs">
 
-  <head>
-    <title>IPRO 497 Team C Project</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@200&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@1,100&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" async></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script src="js/jsScript.js" async></script>
-    <script>
-      $(document).ready(function () {
-        $(".button-collapse").sideNav();
-      });
-    </script>
-  
-  </head>
+<head>
+  <title>IPRO 497 Team C Project</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@1,100&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" async></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="js/jsScript.js" async></script>
+  <script>
+    $(document).ready(function () {
+      $(".button-collapse").sideNav();
+    });
+  </script>
+
+</head>
 
 <body>
   <main>
@@ -46,35 +46,35 @@
       <li><a href="login">Login</a></li>
       <li><a href="contact">Contact Us</a></li>
     </ul>
-    <section id="mainform" >
-        <div class="row">
-          <h3>Contact Us</h3>
-          <form class="col s12">
-            <div class="row">
-              <div class="input-field col s6">
-                <input id="first_name" type="text" class="validate">
-                <label for="first_name">First Name</label>
-              </div>
-              <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate">
-                <label for="last_name">Last Name</label>
-              </div>
+    <section id="mainform">
+      <div class="row">
+        <h3>Contact Us</h3>
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="first_name" type="text" class="validate">
+              <label for="first_name">First Name</label>
             </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
-                <label for="email">Email</label>
-              </div>
+            <div class="input-field col s6">
+              <input id="last_name" type="text" class="validate">
+              <label for="last_name">Last Name</label>
             </div>
-            <div class="row card-panel white lighten-2">
-              <div class="input-field col s12">
-                <textarea id="textarea1" class="materialize-textarea" style="height: 150px; "></textarea>
-                <label for="textarea1">Message</label>
-              </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="email" class="validate">
+              <label for="email">Email</label>
             </div>
-            <a class="waves-effect waves-light btn-small">Submit</a>
-          </form>
-        </div>
+          </div>
+          <div class="row card-panel white lighten-2">
+            <div class="input-field col s12">
+              <textarea id="textarea1" class="materialize-textarea" style="height: 150px; "></textarea>
+              <label for="textarea1">Message</label>
+            </div>
+          </div>
+          <a class="waves-effect waves-light btn-small">Submit</a>
+        </form>
+      </div>
     </section>
     <footer class="page-footer grey">
       <div class="container">
