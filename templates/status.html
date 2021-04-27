@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@1,100&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" async></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
@@ -20,36 +19,68 @@
         });
     </script>
 </head>
+
 <body>
-    <!-- NAV-BAR -->
-    <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper grey">
-                <a href="/" class="brand-logo">Logo</a>
-                <a href="/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="creation">Create Account</a></li>
-                    <li><a href="login">Login</a></li>
-                    <li><a href="contact">Contact Us</a></li>
-                </ul>
-            </div>
-        </nav>
+<!-- NAV-BAR -->
+<div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper grey">
+        <a href="/" class="black-text brand-logo center">Scarlett Reserve</a>
+        <a href="/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="creation" class="black-text">Create Account</a></li>
+          <li><a href="login" class="black-text">Login</a></li>
+          <li><a href="contact" class="black-text">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <ul class="side-nav" id="mobile-demo">
+    <li><a href="creation">Create Account</a></li>
+    <li><a href="login">Login</a></li>
+    <li><a href="contact">Contact Us</a></li>
+  </ul>
+
+  <!-- MAINSECTION -->
+
+    <div class="container">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint molestias incidunt maiores sequi voluptas
+            rerum saepe, ipsum quidem magni laboriosam repellendus quisquam, ex natus, quos vitae reiciendis aspernatur
+            atque iste eum. Esse optio suscipit eius laudantium. Incidunt ut perspiciatis exercitationem optio commodi
+            quaerat enim, vel adipisci culpa delectus voluptates ratione. Quia quisquam maxime praesentium, optio harum
+            sed blanditiis enim eligendi veritatis, ullam soluta iusto! Maxime exercitationem fugiat ea alias,
+            praesentium maiores soluta sequi ab totam nam ipsum recusandae nulla facilis? Ex, saepe omnis dolore nemo,
+            impedit illo dolor labore ratione reprehenderit sapiente, alias aperiam ipsam repellat. Minima, eaque?
+            Consequatur, tenetur.</p>
     </div>
-    <ul class="side-nav" id="mobile-demo">
-        <li><a href="creation">Create Account</a></li>
-        <li><a href="login">Login</a></li>
-        <li><a href="contact">Contact Us</a></li>
-    </ul>
-    <div id="result1"></div>
+
     <!-- adding button -->
     <div class="container">
         <div class="row">
             <div class="col s12">
                 <div class="section ">
-                    <a class="waves-effect waves-light btn-large" onclick="location.href = 'scheduling';">Schedule Room</a>
+                    <a class="waves-effect waves-light btn-large" onclick="location.href = 'scheduling';">Schedule
+                        Room</a>
                 </div>
             </div>
         </div>
     </div>
+          <!-- Footer -->
+          <footer class="page-footer grey">
+            <div class="container">
+              <div class="row">
+                <div class="col s12">
+                  <h5 class="black-text center">Footer Content</h5>
+                  <p class="black-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                </div>
+              </div>
+            </div>
+            <div class="footer-copyright">
+              <div class="black-text container">
+                © 2021 Team C IPRO Project
+              </div>
+            </div>
+          </footer>
 </body>
+
 </html>
