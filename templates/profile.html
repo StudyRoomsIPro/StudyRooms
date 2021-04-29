@@ -24,17 +24,30 @@
     <script>
 	function foo() {
 	    var x = {{ reservations|tojson }};
+	    if (!x){
+	      document.getElementById("xyz").innerHTML = "No Reservations";
+	      return;
+	    }
 	    var y = x.replace("=>", " @ ");
 	    y = y.replace(/\"/g, "");
 	    y = y.replace(/\_/g, " ");
 	    
-	    if (y === "None"){
-	      document.getElementById("xyz").innerHTML = "No Reservations";
-	    }
-	    else{
-	      document.getElementById("xyz").innerHTML = y;
-	    }
+	    document.getElementById("xyz").innerHTML = y;
 	}
+    </script>
+    <script>
+      function check_rating() {
+	var rating = {{ rate|tojson }};
+	if (parseFloat(rating) < 3.5){
+	  //flash message
+	  var msg = "you have a rating of " + rating + ". You need at least a 3.5 to reserve a room";
+	  window.alert(msg);
+   	  location.href = "profile";
+	}
+	else{
+   	  location.href = "scheduling";
+	}
+      }
     </script>
 
 </head>
@@ -47,8 +60,9 @@
         <a href="/" class="black-text brand-logo center">Scarlett Reserve</a>
         <a href="/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="creation" class="black-text">Create Account</a></li>
-          <li><a href="login" class="black-text">Login</a></li>
+  	  <li><a href="#0" onclick="check_rating()" class="black-text">Schedule A Room</a></li>
+	  <li><a href="creation" class="black-text">Create Account</a></li>
+	  <li><a href="login" class="black-text">Login</a></li>
           <li><a href="contact" class="black-text">Contact Us</a></li>
         </ul>
       </div>
@@ -71,7 +85,7 @@
                     Scheduled Rooms:
                 </h2>
 		<h3 id="xyz">
-		    {{ reservations }}
+		    There was a problem displaying your reserved rooms :(
 		</h3>
             </div>
         </section>
