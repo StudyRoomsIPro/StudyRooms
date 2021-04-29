@@ -45,6 +45,13 @@
       <li><a href="contact">Contact Us</a></li>
     </ul>
 
+    {% for message in get_flashed_messages() %}
+      <div class="alert_alert-warning">
+	<button type="button" class="close" data-dismiss="alert">&times;</button>
+	{{ messages }}
+      </div>
+    {% endfor %}
+
     <!-- MAINSECTION -->
     <section id="mainform">
       <div class="row center ">
@@ -54,7 +61,7 @@
             <label for="fname">First Name</label>
           </div>
           <div class="input-field ">
-            <input id="lname" type="text" name="lname " class="white-text text-darken-2">
+            <input id="lname" type="text" name="lname" class="white-text text-darken-2">
             <label for="lname">Last Name</label>
           </div>
           <div class="input-field ">

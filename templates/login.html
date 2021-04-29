@@ -44,6 +44,13 @@
       <li><a href="contact">Contact Us</a></li>
     </ul>
 
+    [% for message in get_flashed_messages() %}
+      <div class="alert_alert-warning">
+	<button type="button" class="close" data-dismiss="alert">&times;</button>
+	{{ message }}
+      </div>
+    {% endfor %}
+
     <!-- MAINSECTION -->
     <section id="mainform" >
       <div class="row center ">

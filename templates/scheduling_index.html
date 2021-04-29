@@ -8,6 +8,22 @@
   <script async src="js/jsScript.js"></script>
   <script async src="js/main.js"></script>
   <script async src="js/util.js"></script>
+  <script>
+    function myFunc() {
+      var element = document.getElementBId("someID");
+      document.cookie = 'startTime=' + element.getAttribute("data-start");
+      document.cookie = 'endTime=' + element.getAttribute("data-end");
+
+      var elements = document.getElementsByClassName("cd-schedule_name");
+
+      for (var i=0; i < elements.length; i++){
+	var withUnderscores = elements[i].innerHTML.replace(/\ /g, '_');
+	document.cookie = 'roomName' + i.toString() + '=' + withUnderscores;
+      }
+      
+      location.href = "confirmation";
+    }
+  </script>
 
   <!-- // document.getElementsByTagName("html")[0].className += " js"; -->
   <!-- </script> -->
@@ -57,6 +73,12 @@
             <li class="cd-schedule__event">
               <a data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1" href="#0">
                 <em class="cd-schedule__name">Room #1</em>
+              </a>
+            </li>
+
+	    <li class="cd-schedule__event" onclick="myFunc()">
+              <a id="someId" data-start="14:30" data-end="15:30" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">Wishnick Hall 117</em>
               </a>
             </li>
 

@@ -21,22 +21,19 @@
    </script> 
 </head>
    <script type="text/javascript" language="javascript">
-      var buildings = ["IIT Tower", "Wishnick Hall", "Tech Park - South Building", "Stuart Building",
-         "Robert A. Pritzker Science Ctr", "Downtown Campus", "Hermann Hall"
-      ]
       $(document).ready(function () {
          $("p").html("<i>Hello!  Please select a building of your choice</i>");
-         var i;
-         for (i = 0; i < buildings.length; i++) {
-            var building = $("<p></p>").text(buildings[i]);
-            building.attr("id", buildings[i].toString());
+         {% for build in buildings %}
+	    var temp = {{ build|tojson }};
+            var building = $("<p></p>").text(temp);
+            building.attr("id", temp);
             building.click(function () {
                $("p:not(" + this.id + ")").hide();
                //need to add code to display rooms
                location.href = "scheduling_index"
             });
             $("body").append(building);
-         }
+	 {% endfor %}
       });
    </script>
    <style>

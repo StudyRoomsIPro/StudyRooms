@@ -21,8 +21,24 @@
             $(".button-collapse").sideNav();
         });
     </script>
+    <script>
+	function foo() {
+	    var x = {{ reservations|tojson }};
+	    var y = x.replace("=>", " @ ");
+	    y = y.replace(/\"/g, "");
+	    y = y.replace(/\_/g, " ");
+	    
+	    if (y === "None"){
+	      document.getElementById("xyz").innerHTML = "No Reservations";
+	    }
+	    else{
+	      document.getElementById("xyz").innerHTML = y;
+	    }
+	}
+    </script>
+
 </head>
-<body>
+<body onload="foo()">
     <main>
 <!-- NAV-BAR -->
 <div class="navbar-fixed">
@@ -49,11 +65,14 @@
         <section class="main-profile">
             <div class="container">
                 <h1>
-                    {{g.user.username}}'s Profile
+		    Hi, {{ name }}!
                 </h1>
                 <h2>
-                    You are user number #{{g.user.id}}
+                    Scheduled Rooms:
                 </h2>
+		<h3 id="xyz">
+		    {{ reservations }}
+		</h3>
             </div>
         </section>
         <footer class="page-footer grey">
